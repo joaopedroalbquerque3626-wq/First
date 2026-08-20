@@ -1,0 +1,6 @@
+{
+  "name": "COMPETE - Competições, Equipes e Patrocínio",
+  "description": "Plataforma oficial para apresentação de competições, equipes homologadas, súmulas e resultados oficiais, e conexões comerciais de patrocínio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
