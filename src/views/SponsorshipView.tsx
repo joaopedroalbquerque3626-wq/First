@@ -9,7 +9,8 @@ import {
   Send,
   Briefcase,
   AlertCircle,
-  HelpCircle
+  Cpu,
+  Bot
 } from 'lucide-react';
 
 export const SponsorshipView: React.FC = () => {
@@ -102,51 +103,51 @@ export const SponsorshipView: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 sm:py-16">
+    <div className="min-h-screen py-12 sm:py-16 bg-[#FDFCF8] text-[#1A1A1A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Editorial Commercial Hero */}
-        <section className="border-b border-[#77746E]/20 pb-12 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#252422] text-[#E95D2A] text-xs uppercase font-bold tracking-widest border border-[#E95D2A]/30">
-            CANAL COMERCIAL & PATROCÍNIO
+        <section className="border-b border-[#1A1A1A]/10 pb-12 space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#1A1A1A]/5 text-[#B44D2E] text-[10px] uppercase font-bold tracking-[0.3em] border border-[#1A1A1A]/10 font-sans">
+            CANAL COMERCIAL & PATROCÍNIO DE ROBÓTICA
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-black uppercase text-[#F1EDE4] leading-[0.9] text-balance">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase text-[#1A1A1A] leading-[0.9] tracking-tight">
             NÃO COLOQUE APENAS SUA LOGO. <br />
-            <span className="text-[#E95D2A]">COLOQUE SUA MARCA DENTRO DA HISTÓRIA.</span>
+            <span className="font-serif italic font-normal text-[#B44D2E]">COLOQUE SUA MARCA NO CORAÇÃO DA ENGENHARIA.</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-[#F1EDE4]/80 max-w-3xl leading-relaxed">
-            Tem gente competindo. Tem gente torcendo. Falta a sua marca. Conectamos empresas a campeonatos oficiais e equipes de alta performance com contrapartidas auditáveis, contratos seguros e relacionamento direto com organizadores.
+          <p className="text-base sm:text-lg text-[#1A1A1A]/80 max-w-3xl leading-relaxed font-sans">
+            Robôs colidindo a 250 km/h, algoritmos de inteligência artificial disputando milissegundos e milhares de estudantes de engenharia e tecnologia no auge de seu potencial. Conecte sua marca a competições oficiais e equipes de robótica homologadas.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-            <div className="border-l-2 border-[#E95D2A] pl-4 space-y-1">
-              <span className="text-xs font-bold text-[#E95D2A] uppercase">01. Associação Direta</span>
-              <h3 className="font-display font-bold text-lg text-[#F1EDE4] uppercase">
+            <div className="border-l-2 border-[#B44D2E] pl-4 space-y-1">
+              <span className="text-[10px] font-bold text-[#B44D2E] uppercase tracking-widest font-sans">01. Arenas Blindadas</span>
+              <h3 className="font-display font-bold text-lg text-[#1A1A1A] uppercase">
                 Naming Rights & Arena
               </h3>
-              <p className="text-xs text-[#77746E]">
-                Visibilidade central em quadras, pistas, palcos e material de comunicação oficial.
+              <p className="text-xs text-[#1A1A1A]/70 font-sans">
+                Exposição master nos vidros blindados de policarbonato, backdrop de pesagem e transmissões ao vivo.
               </p>
             </div>
 
-            <div className="border-l-2 border-[#B9D531] pl-4 space-y-1">
-              <span className="text-xs font-bold text-[#B9D531] uppercase">02. Apoio a Equipes</span>
-              <h3 className="font-display font-bold text-lg text-[#F1EDE4] uppercase">
-                Espaço Master em Uniformes
+            <div className="border-l-2 border-[#1A1A1A] pl-4 space-y-1">
+              <span className="text-[10px] font-bold text-[#1A1A1A] uppercase tracking-widest font-sans">02. Patrocínio de Bancada</span>
+              <h3 className="font-display font-bold text-lg text-[#1A1A1A] uppercase">
+                Chassi de Robôs & Boxes
               </h3>
-              <p className="text-xs text-[#77746E]">
-                Patrocínio de camisas de jogo, transporte e bolsas de incentivo a atletas.
+              <p className="text-xs text-[#1A1A1A]/70 font-sans">
+                Adesivagem na blindagem de robôs de combate, uniformes de pilotos e fornecimento de insumos técnicos.
               </p>
             </div>
 
-            <div className="border-l-2 border-[#F1EDE4] pl-4 space-y-1">
-              <span className="text-xs font-bold text-[#F1EDE4] uppercase">03. Ativações Reais</span>
-              <h3 className="font-display font-bold text-lg text-[#F1EDE4] uppercase">
-                Presença e Experiência
+            <div className="border-l-2 border-[#B44D2E] pl-4 space-y-1">
+              <span className="text-[10px] font-bold text-[#B44D2E] uppercase tracking-widest font-sans">03. Recrutamento Tech</span>
+              <h3 className="font-display font-bold text-lg text-[#1A1A1A] uppercase">
+                Talentos STEM & Engenharia
               </h3>
-              <p className="text-xs text-[#77746E]">
-                Estandes, degustação, distribuição de brindes e interações diretas com o público presente.
+              <p className="text-xs text-[#1A1A1A]/70 font-sans">
+                Acesso direto a programadores C++, engenheiros mecânicos, eletricistas e projetistas de ponta.
               </p>
             </div>
           </div>
@@ -157,10 +158,10 @@ export const SponsorshipView: React.FC = () => {
           {/* Left Column: Real Opportunities (If available) */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <span className="text-xs uppercase font-bold tracking-widest text-[#B9D531]">
+              <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-[#B44D2E] font-sans">
                 COTAS HOMOLOGADAS
               </span>
-              <h2 className="text-2xl sm:text-3xl font-display font-bold uppercase text-[#F1EDE4] mt-1">
+              <h2 className="text-2xl sm:text-3xl font-display font-bold uppercase text-[#1A1A1A] mt-1">
                 Oportunidades em Aberto
               </h2>
             </div>
@@ -170,38 +171,38 @@ export const SponsorshipView: React.FC = () => {
                 {opportunities.map((opp) => (
                   <div
                     key={opp.id}
-                    className="border border-[#77746E]/30 bg-[#181716] p-6 space-y-3"
+                    className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 space-y-3 shadow-[0_2px_8px_rgba(0,0,0,0.02)]"
                   >
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="text-[#E95D2A] uppercase font-bold tracking-wider">
+                    <div className="flex items-center justify-between text-xs font-sans">
+                      <span className="text-[#B44D2E] uppercase font-bold tracking-wider text-[10px]">
                         {opp.type.replace('_', ' ')}
                       </span>
                       {opp.estimatedInvestmentRange && (
-                        <span className="text-[#B9D531] font-semibold">
+                        <span className="text-[#1A1A1A] font-serif font-bold italic">
                           {opp.estimatedInvestmentRange}
                         </span>
                       )}
                     </div>
 
-                    <h3 className="text-xl font-display font-bold uppercase text-[#F1EDE4] leading-tight">
+                    <h3 className="text-xl font-serif font-bold uppercase text-[#1A1A1A] leading-tight">
                       {opp.title}
                     </h3>
 
                     {opp.targetEntityName && (
-                      <div className="text-xs text-[#77746E]">
-                        Entidade: <span className="text-[#F1EDE4]">{opp.targetEntityName}</span>
+                      <div className="text-xs text-[#1A1A1A]/70 font-sans">
+                        Entidade: <span className="text-[#1A1A1A] font-medium">{opp.targetEntityName}</span>
                       </div>
                     )}
 
-                    <p className="text-xs text-[#77746E] leading-relaxed">
+                    <p className="text-xs text-[#1A1A1A]/70 leading-relaxed font-sans">
                       {opp.description}
                     </p>
 
                     {opp.benefitsList.length > 0 && (
-                      <ul className="text-xs text-[#77746E] space-y-1 pt-1">
+                      <ul className="text-xs text-[#1A1A1A]/80 space-y-1 pt-1 font-sans">
                         {opp.benefitsList.slice(0, 3).map((b, idx) => (
                           <li key={idx} className="flex items-start gap-1.5">
-                            <span className="text-[#B9D531]">•</span>
+                            <span className="text-[#B44D2E] font-bold">•</span>
                             <span>{b}</span>
                           </li>
                         ))}
@@ -211,52 +212,52 @@ export const SponsorshipView: React.FC = () => {
                 ))}
               </div>
             ) : (
-              <div className="border border-[#77746E]/20 bg-[#161514] p-6 text-xs text-[#77746E] leading-relaxed">
-                As cotas comerciais específicas estão em atualização. Você pode enviar uma proposta personalizada utilizando o formulário ao lado.
+              <div className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 text-xs text-[#1A1A1A]/70 leading-relaxed font-sans">
+                As cotas comerciais específicas estão em atualização pela diretoria de eventos. Você pode enviar uma proposta personalizada utilizando o formulário ao lado.
               </div>
             )}
 
             {/* Credibility Guarantee */}
-            <div className="p-5 border border-[#77746E]/30 bg-[#141312] space-y-2">
-              <div className="flex items-center gap-2 text-[#B9D531]">
+            <div className="p-5 border border-[#1A1A1A]/10 bg-[#F6F4EE] space-y-2">
+              <div className="flex items-center gap-2 text-[#B44D2E]">
                 <ShieldCheck className="w-4 h-4" />
-                <span className="text-xs uppercase font-bold tracking-wider">
+                <span className="text-[10px] uppercase font-bold tracking-widest font-sans">
                   Garantia de Transparência
                 </span>
               </div>
-              <p className="text-xs text-[#77746E] leading-relaxed">
-                Todos os contatos comerciais são recebidos diretamente pela diretoria executiva das competições e pelos representantes oficiais das equipes homologadas.
+              <p className="text-xs text-[#1A1A1A]/70 leading-relaxed font-sans">
+                Todos os contatos comerciais são recebidos diretamente pela diretoria executiva das competições de robótica e pelos capitães oficiais das equipes homologadas.
               </p>
             </div>
           </div>
 
           {/* Right Column: Commercial Form */}
           <div className="lg:col-span-7">
-            <div className="border border-[#77746E]/30 bg-[#181716] p-6 sm:p-10 space-y-6">
+            <div className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 sm:p-10 space-y-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
               <div>
-                <span className="text-xs uppercase font-bold tracking-widest text-[#E95D2A]">
+                <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-[#B44D2E] font-sans">
                   FORMULÁRIO DE INTERESSE
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold uppercase text-[#F1EDE4] mt-1">
+                <h2 className="text-2xl sm:text-3xl font-display font-bold uppercase text-[#1A1A1A] mt-1">
                   Solicitar Proposta de Patrocínio
                 </h2>
-                <p className="text-xs sm:text-sm text-[#77746E] mt-1">
-                  Preencha os dados da sua empresa para receber o book comercial e valores oficiais.
+                <p className="text-xs sm:text-sm text-[#1A1A1A]/70 mt-1 font-sans">
+                  Preencha os dados da sua empresa para receber o book comercial com métricas de impacto e valores oficiais.
                 </p>
               </div>
 
               {/* Feedback messages */}
               {successMessage && (
-                <div className="p-4 bg-[#B9D531]/10 border border-[#B9D531] text-[#B9D531] text-xs sm:text-sm flex items-start gap-3">
+                <div className="p-4 bg-[#B44D2E]/10 border border-[#B44D2E] text-[#B44D2E] text-xs sm:text-sm flex items-start gap-3 font-sans">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
-                  <span className="leading-relaxed">{successMessage}</span>
+                  <span className="leading-relaxed font-medium">{successMessage}</span>
                 </div>
               )}
 
               {errorMessage && (
-                <div className="p-4 bg-[#E95D2A]/10 border border-[#E95D2A] text-[#E95D2A] text-xs sm:text-sm flex items-start gap-3">
+                <div className="p-4 bg-red-100 border border-red-400 text-red-700 text-xs sm:text-sm flex items-start gap-3 font-sans">
                   <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
-                  <span className="leading-relaxed">{errorMessage}</span>
+                  <span className="leading-relaxed font-medium">{errorMessage}</span>
                 </div>
               )}
 
@@ -273,44 +274,44 @@ export const SponsorshipView: React.FC = () => {
 
                 {/* Interest Type Radio Pills */}
                 <div>
-                  <label className="block text-xs uppercase font-bold tracking-wider text-[#F1EDE4] mb-2">
+                  <label className="block text-xs uppercase font-bold tracking-wider text-[#1A1A1A] mb-2 font-sans">
                     Tipo de Interesse Comercial *
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                     <button
                       type="button"
                       onClick={() => setInterestType('competition')}
-                      className={`py-2.5 px-3 text-xs uppercase font-bold tracking-wider border transition-colors ${
+                      className={`py-2.5 px-3 text-xs uppercase font-bold tracking-wider border transition-colors font-sans ${
                         interestType === 'competition'
-                          ? 'bg-[#E95D2A] border-[#E95D2A] text-[#F1EDE4]'
-                          : 'bg-[#131312] border-[#77746E]/30 text-[#77746E] hover:text-[#F1EDE4]'
+                          ? 'bg-[#1A1A1A] border-[#1A1A1A] text-[#FDFCF8]'
+                          : 'bg-[#F6F4EE] border-[#1A1A1A]/10 text-[#1A1A1A]/70 hover:text-[#1A1A1A]'
                       }`}
                     >
-                      Patrocinar Competição
+                      Torneio / Arena
                     </button>
 
                     <button
                       type="button"
                       onClick={() => setInterestType('team')}
-                      className={`py-2.5 px-3 text-xs uppercase font-bold tracking-wider border transition-colors ${
+                      className={`py-2.5 px-3 text-xs uppercase font-bold tracking-wider border transition-colors font-sans ${
                         interestType === 'team'
-                          ? 'bg-[#E95D2A] border-[#E95D2A] text-[#F1EDE4]'
-                          : 'bg-[#131312] border-[#77746E]/30 text-[#77746E] hover:text-[#F1EDE4]'
+                          ? 'bg-[#1A1A1A] border-[#1A1A1A] text-[#FDFCF8]'
+                          : 'bg-[#F6F4EE] border-[#1A1A1A]/10 text-[#1A1A1A]/70 hover:text-[#1A1A1A]'
                       }`}
                     >
-                      Patrocinar Equipe
+                      Equipe / Robô
                     </button>
 
                     <button
                       type="button"
                       onClick={() => setInterestType('institutional')}
-                      className={`py-2.5 px-3 text-xs uppercase font-bold tracking-wider border transition-colors ${
+                      className={`py-2.5 px-3 text-xs uppercase font-bold tracking-wider border transition-colors font-sans ${
                         interestType === 'institutional'
-                          ? 'bg-[#E95D2A] border-[#E95D2A] text-[#F1EDE4]'
-                          : 'bg-[#131312] border-[#77746E]/30 text-[#77746E] hover:text-[#F1EDE4]'
+                          ? 'bg-[#1A1A1A] border-[#1A1A1A] text-[#FDFCF8]'
+                          : 'bg-[#F6F4EE] border-[#1A1A1A]/10 text-[#1A1A1A]/70 hover:text-[#1A1A1A]'
                       }`}
                     >
-                      Parceria Institucional
+                      Circuito Geral
                     </button>
                   </div>
                 </div>
@@ -318,14 +319,14 @@ export const SponsorshipView: React.FC = () => {
                 {/* Optional Competition / Team selection */}
                 {interestType === 'competition' && (
                   <div>
-                    <label htmlFor="target-comp" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
-                      Competição Específica (Opcional)
+                    <label htmlFor="target-comp" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
+                      Competição de Robótica (Opcional)
                     </label>
                     <select
                       id="target-comp"
                       value={targetCompetitionId}
                       onChange={(e) => setTargetCompetitionId(e.target.value)}
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     >
                       <option value="">Selecione ou deixe aberto para todo o circuito</option>
                       {competitions.map((c) => (
@@ -339,14 +340,14 @@ export const SponsorshipView: React.FC = () => {
 
                 {interestType === 'team' && (
                   <div>
-                    <label htmlFor="target-team" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
-                      Equipe Específica (Opcional)
+                    <label htmlFor="target-team" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
+                      Equipe de Robótica (Opcional)
                     </label>
                     <select
                       id="target-team"
                       value={targetTeamId}
                       onChange={(e) => setTargetTeamId(e.target.value)}
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     >
                       <option value="">Selecione a equipe de interesse</option>
                       {teams.map((t) => (
@@ -361,7 +362,7 @@ export const SponsorshipView: React.FC = () => {
                 {/* Company & Contact fields */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="company-name" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="company-name" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       Nome da Empresa / Marca *
                     </label>
                     <input
@@ -370,13 +371,13 @@ export const SponsorshipView: React.FC = () => {
                       required
                       value={companyName}
                       onChange={(e) => setCompanyName(e.target.value)}
-                      placeholder="Ex: Empresa Ltda"
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      placeholder="Ex: Tech Corp Solutions"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contact-person" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="contact-person" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       Nome do Responsável *
                     </label>
                     <input
@@ -386,14 +387,14 @@ export const SponsorshipView: React.FC = () => {
                       value={contactPerson}
                       onChange={(e) => setContactPerson(e.target.value)}
                       placeholder="Ex: Juliana Santos"
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="lead-email" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="lead-email" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       E-mail Corporativo *
                     </label>
                     <input
@@ -403,12 +404,12 @@ export const SponsorshipView: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="contato@suaempresa.com.br"
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="lead-phone" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="lead-phone" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       Telefone / WhatsApp *
                     </label>
                     <input
@@ -418,14 +419,14 @@ export const SponsorshipView: React.FC = () => {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="(11) 99999-9999"
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="lead-website" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="lead-website" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       Site da Empresa (Opcional)
                     </label>
                     <input
@@ -434,25 +435,25 @@ export const SponsorshipView: React.FC = () => {
                       value={website}
                       onChange={(e) => setWebsite(e.target.value)}
                       placeholder="https://suaempresa.com.br"
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="investment-range" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="investment-range" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       Faixa de Investimento Pretendida
                     </label>
                     <select
                       id="investment-range"
                       value={investmentRange}
                       onChange={(e) => setInvestmentRange(e.target.value)}
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     >
                       <option value="">Selecione uma faixa estimada</option>
-                      <option value="Até R$ 5.000">Apoio Inicial (Até R$ 5.000)</option>
-                      <option value="R$ 5.000 a R$ 15.000">Cota Regional (R$ 5.000 a R$ 15.000)</option>
-                      <option value="R$ 15.000 a R$ 50.000">Patrocínio Oficial (R$ 15.000 a R$ 50.000)</option>
-                      <option value="Acima de R$ 50.000">Naming Rights / Master (Acima de R$ 50.000)</option>
+                      <option value="Até R$ 5.000">Apoio em Peças/Bancada (Até R$ 5.000)</option>
+                      <option value="R$ 5.000 a R$ 15.000">Cota Regional de Box (R$ 5.000 a R$ 15.000)</option>
+                      <option value="R$ 15.000 a R$ 50.000">Patrocínio Master de Arena (R$ 15.000 a R$ 50.000)</option>
+                      <option value="Acima de R$ 50.000">Naming Rights do Torneio (Acima de R$ 50.000)</option>
                       <option value="A definir em reunião">A definir em reunião com a diretoria</option>
                     </select>
                   </div>
@@ -460,7 +461,7 @@ export const SponsorshipView: React.FC = () => {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="lead-message" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                  <label htmlFor="lead-message" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                     Mensagem / Objetivos da Marca *
                   </label>
                   <textarea
@@ -469,19 +470,19 @@ export const SponsorshipView: React.FC = () => {
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Descreva o que sua marca busca (visibilidade de quadra, ativação de produto, patrocínio de camisa, etc.)..."
-                    className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] p-3 focus:outline-none focus:border-[#E95D2A]"
+                    placeholder="Descreva o que sua marca busca (blindagem de arena, recrutamento de engenheiros, patrocínio de robô, estande no paddock)..."
+                    className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] p-3 focus:outline-none focus:border-[#B44D2E] font-sans"
                   />
                 </div>
 
                 {/* Privacy Consent */}
                 <div className="pt-1">
-                  <label className="flex items-start gap-2 text-xs text-[#77746E] cursor-pointer">
+                  <label className="flex items-start gap-2 text-xs text-[#1A1A1A]/70 cursor-pointer font-sans">
                     <input
                       type="checkbox"
                       checked={privacyConsent}
                       onChange={(e) => setPrivacyConsent(e.target.checked)}
-                      className="mt-0.5 w-4 h-4 accent-[#E95D2A]"
+                      className="mt-0.5 w-4 h-4 accent-[#B44D2E]"
                     />
                     <span>
                       Concordo com o tratamento dos dados informados exclusivamente para envio da proposta comercial e contato da organização oficial (em conformidade com a LGPD).
@@ -495,10 +496,10 @@ export const SponsorshipView: React.FC = () => {
                     id="submit-sponsorship-lead-btn"
                     type="submit"
                     disabled={submitting}
-                    className="w-full py-4 bg-[#E95D2A] hover:bg-[#d64e1c] text-[#F1EDE4] font-display font-bold text-lg uppercase tracking-wider transition-all cut-corner flex items-center justify-center gap-2 shadow-lg disabled:opacity-50"
+                    className="w-full py-4 bg-[#B44D2E] hover:bg-[#8F3A20] text-[#FDFCF8] font-sans font-bold text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 shadow-sm disabled:opacity-50"
                   >
                     <span>{submitting ? 'PROCESSANDO...' : 'QUERO CONVERSAR SOBRE PATROCÍNIO'}</span>
-                    <ArrowUpRight className="w-5 h-5" />
+                    <ArrowUpRight className="w-4 h-4" />
                   </button>
                 </div>
               </form>

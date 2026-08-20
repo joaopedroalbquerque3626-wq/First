@@ -99,16 +99,16 @@ interface DataContextType {
 }
 
 const STORAGE_KEYS = {
-  competitions: 'compete_db_competitions_v1',
-  teams: 'compete_db_teams_v1',
-  results: 'compete_db_results_v1',
-  sponsors: 'compete_db_sponsors_v1',
-  opportunities: 'compete_db_opportunities_v1',
-  leads: 'compete_db_leads_v1',
-  stories: 'compete_db_stories_v1',
-  metrics: 'compete_db_metrics_v1',
-  contacts: 'compete_db_contacts_v1',
-  settings: 'compete_db_settings_v1',
+  competitions: 'robocompete_robotics_db_competitions_v2',
+  teams: 'robocompete_robotics_db_teams_v2',
+  results: 'robocompete_robotics_db_results_v2',
+  sponsors: 'robocompete_robotics_db_sponsors_v2',
+  opportunities: 'robocompete_robotics_db_opportunities_v2',
+  leads: 'robocompete_robotics_db_leads_v2',
+  stories: 'robocompete_robotics_db_stories_v2',
+  metrics: 'robocompete_robotics_db_metrics_v2',
+  contacts: 'robocompete_robotics_db_contacts_v2',
+  settings: 'robocompete_robotics_db_settings_v2',
 };
 
 const DataContext = createContext<DataContextType | undefined>(undefined);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigation } from '../../context/NavigationContext';
 import { useData } from '../../context/DataContext';
-import { ArrowUpRight, Lock, Mail, Phone, MapPin, Instagram, Linkedin, Trophy } from 'lucide-react';
+import { ArrowUpRight, Lock, Mail, Phone, MapPin, Instagram, Linkedin, Bot } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const { navigate } = useNavigation();
@@ -14,10 +14,10 @@ export const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="text-[10px] uppercase font-bold tracking-[0.3em] text-[#B44D2E] mb-2 font-sans">
-              Volume 2026 &mdash; Competições &bull; Equipes &bull; Patrocínio
+              Robótica Competitiva &bull; Arenas de Combate &bull; FRC &bull; Patrocínio
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-black uppercase text-[#FDFCF8] tracking-tight">
-              NÃO ASSISTA DE FORA.
+              ROBÔS NÃO SE CONSTROEM SOZINHOS.
             </h2>
           </div>
           <div className="flex flex-wrap items-center gap-3">
@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
               onClick={() => navigate('sponsorship')}
               className="px-6 py-3 bg-[#B44D2E] hover:bg-[#8F3A20] text-[#FDFCF8] text-[11px] uppercase tracking-[0.2em] font-sans font-bold transition-colors inline-flex items-center gap-2"
             >
-              <span>Quero Patrocinar</span>
+              <span>Patrocinar Robótica</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
           </div>
@@ -45,17 +45,17 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 bg-[#B44D2E] flex items-center justify-center">
-                <Trophy className="w-4 h-4 text-[#FDFCF8]" />
+                <Bot className="w-4 h-4 text-[#FDFCF8]" />
               </div>
               <span className="font-display font-black text-2xl tracking-tighter text-[#FDFCF8]">
-                {settings.platformName || 'COMPETE'}.
+                {settings.platformName || 'ROBOCOMPETE'}.
               </span>
             </div>
             <p className="text-xs text-[#FDFCF8]/70 leading-relaxed font-sans">
-              {settings.tagline || 'Plataforma Oficial de Competições, Equipes e Patrocínio.'}
+              {settings.tagline || 'Plataforma Oficial de Competições de Robótica, Equipes e Patrocínio.'}
             </p>
             <div className="text-[10px] uppercase tracking-[0.25em] text-[#FDFCF8]/40 border-t border-[#FDFCF8]/10 pt-3 font-sans">
-              Dados homologados por organizadores oficiais e arbitragem credenciada.
+              Súmulas e laudos técnicos homologados por ligas de robótica e bancas examinadoras.
             </div>
           </div>
 

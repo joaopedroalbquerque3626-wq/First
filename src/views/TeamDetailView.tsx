@@ -15,7 +15,10 @@ import {
   Phone,
   Instagram,
   Youtube,
-  Globe
+  Globe,
+  Bot,
+  Cpu,
+  Wrench
 } from 'lucide-react';
 
 export const TeamDetailView: React.FC = () => {
@@ -31,10 +34,10 @@ export const TeamDetailView: React.FC = () => {
 
   if (!team) {
     return (
-      <div className="min-h-[70vh] flex items-center justify-center px-4 py-16">
+      <div className="min-h-[70vh] flex items-center justify-center px-4 py-16 bg-[#FDFCF8]">
         <EmptyState
-          title="Equipe não encontrada"
-          message="A equipe solicitada não existe ou ainda não foi publicada no diretório oficial."
+          title="Equipe de robótica não encontrada"
+          message="A equipe solicitada não existe ou ainda não foi publicada no diretório oficial de robótica."
           actionLabel="Voltar para todas as equipes"
           onAction={() => navigate('teams')}
         />
@@ -55,46 +58,46 @@ export const TeamDetailView: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen pb-20">
+    <div className="min-h-screen pb-20 bg-[#FDFCF8] text-[#1A1A1A]">
       {/* Top Breadcrumb Bar */}
-      <div className="border-b border-[#77746E]/20 bg-[#121212] py-4">
+      <div className="border-b border-[#1A1A1A]/10 bg-[#F6F4EE] py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <button
             onClick={() => navigate('teams')}
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-[#77746E] hover:text-[#F1EDE4] transition-colors"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-[#1A1A1A]/60 hover:text-[#1A1A1A] transition-colors font-sans"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Voltar para Equipes</span>
           </button>
-          <div className="text-xs uppercase font-bold text-[#E95D2A]">
+          <div className="text-[10px] uppercase font-bold tracking-widest text-[#B44D2E] font-sans">
             {team.category} • {team.city}/{team.state}
           </div>
         </div>
       </div>
 
       {/* Hero Header */}
-      <section className="relative border-b border-[#77746E]/20 bg-[#151515] py-12 lg:py-16">
+      <section className="relative border-b border-[#1A1A1A]/10 bg-[#FFFFFF] py-12 lg:py-16 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="px-3 py-1 text-xs uppercase font-bold tracking-wider bg-[#252422] text-[#B9D531] border border-[#77746E]/30">
+                <span className="px-3 py-1 text-[10px] uppercase font-bold tracking-wider bg-[#F6F4EE] text-[#B44D2E] border border-[#1A1A1A]/10 font-sans">
                   {team.category}
                 </span>
                 {team.season && (
-                  <span className="text-xs text-[#77746E] font-semibold">
+                  <span className="text-xs text-[#1A1A1A]/60 font-serif font-semibold">
                     Temporada {team.season}
                   </span>
                 )}
                 {team.foundedYear && (
-                  <span className="text-xs text-[#77746E]">
+                  <span className="text-xs text-[#1A1A1A]/60 font-sans">
                     Fundada em {team.foundedYear}
                   </span>
                 )}
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-20 h-20 bg-[#252422] border border-[#77746E]/30 overflow-hidden flex items-center justify-center cut-corner shrink-0">
+                <div className="w-20 h-20 bg-[#F6F4EE] border border-[#1A1A1A]/10 overflow-hidden flex items-center justify-center shrink-0">
                   {team.badgeUrl ? (
                     <img
                       src={team.badgeUrl}
@@ -103,23 +106,23 @@ export const TeamDetailView: React.FC = () => {
                       referrerPolicy="no-referrer"
                     />
                   ) : (
-                    <Users className="w-10 h-10 text-[#77746E]" />
+                    <Bot className="w-10 h-10 text-[#1A1A1A]/40" />
                   )}
                 </div>
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-black uppercase text-[#F1EDE4] leading-tight">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-black uppercase text-[#1A1A1A] leading-tight">
                   {team.name}
                 </h1>
               </div>
 
-              <div className="flex items-center gap-2 text-xs sm:text-sm text-[#77746E]">
-                <MapPin className="w-4 h-4 text-[#E95D2A]" />
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-[#1A1A1A]/60 font-sans">
+                <MapPin className="w-4 h-4 text-[#B44D2E]" />
                 <span>
                   {team.city}, {team.state}
                 </span>
               </div>
 
               {team.bio && (
-                <p className="text-sm sm:text-base text-[#F1EDE4]/80 leading-relaxed max-w-3xl pt-2">
+                <p className="text-sm sm:text-base text-[#1A1A1A]/80 leading-relaxed max-w-3xl pt-2 font-sans">
                   {team.bio}
                 </p>
               )}
@@ -128,10 +131,10 @@ export const TeamDetailView: React.FC = () => {
             {/* Banner or Cover Photo if provided */}
             {team.bannerUrl && (
               <div className="lg:col-span-4">
-                <div className="border border-[#77746E]/30 overflow-hidden bg-[#181716]">
+                <div className="border border-[#1A1A1A]/10 overflow-hidden bg-[#F6F4EE] shadow-sm">
                   <img
                     src={team.bannerUrl}
-                    alt={`Foto da equipe ${team.name}`}
+                    alt={`Foto da bancada/robô ${team.name}`}
                     className="w-full h-64 object-cover"
                     referrerPolicy="no-referrer"
                   />
@@ -146,34 +149,34 @@ export const TeamDetailView: React.FC = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
         {/* SPONSORSHIP CALLOUT (If Team is seeking sponsorship) */}
         {team.isSeekingSponsorship && (
-          <section className="border-2 border-[#E95D2A] bg-[#1a1715] p-8 sm:p-10 space-y-4 relative cut-corner">
-            <div className="inline-flex items-center gap-2 text-xs uppercase font-bold tracking-widest text-[#B9D531]">
+          <section className="border border-[#B44D2E] bg-[#1A1A1A] text-[#FDFCF8] p-8 sm:p-10 space-y-4 relative shadow-lg">
+            <div className="inline-flex items-center gap-2 text-[10px] uppercase font-bold tracking-widest text-[#B44D2E] font-sans">
               <Sparkles className="w-4 h-4" />
-              <span>OPORTUNIDADE COMERCIAL DIRETA</span>
+              <span>OPORTUNIDADE DE PATROCÍNIO TÉCNICO / MASTER</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-display font-black uppercase text-[#F1EDE4] leading-tight">
-              ESTE TIME ESTÁ PROCURANDO <br />
-              <span className="text-[#E95D2A]">QUEM ACREDITE NELE.</span>
+            <h2 className="text-3xl sm:text-5xl font-black uppercase text-[#FDFCF8] leading-tight">
+              ESTA EQUIPE ESTÁ BUSCANDO <br />
+              <span className="font-serif italic font-normal text-[#B44D2E]">PATROCÍNIO PARA SUA TEMPORADA.</span>
             </h2>
 
             {team.sponsorshipProposal ? (
-              <p className="text-sm sm:text-base text-[#F1EDE4]/80 max-w-2xl leading-relaxed">
+              <p className="text-sm sm:text-base text-[#FDFCF8]/80 max-w-2xl leading-relaxed font-sans">
                 {team.sponsorshipProposal}
               </p>
             ) : (
-              <p className="text-sm sm:text-base text-[#77746E] max-w-2xl leading-relaxed">
-                A equipe está com cotas de apoio abertas para uniforme, transporte, inscrições em etapas e materiais esportivos para esta temporada.
+              <p className="text-sm sm:text-base text-[#FDFCF8]/70 max-w-2xl leading-relaxed font-sans">
+                A equipe está com cotas de apoio abertas para usinagem de blindagens, baterias LiPo de alta descarga, motores brushless, uniformes de box e transporte para os campeonatos nacionais.
               </p>
             )}
 
             <div className="pt-2">
               <button
                 onClick={() => navigate('sponsorship')}
-                className="px-8 py-4 bg-[#E95D2A] hover:bg-[#d64e1c] text-[#F1EDE4] font-display font-bold text-lg uppercase tracking-wider transition-all cut-corner inline-flex items-center gap-2"
+                className="px-8 py-4 bg-[#B44D2E] hover:bg-[#8F3A20] text-[#FDFCF8] font-sans font-bold text-xs uppercase tracking-[0.2em] transition-all inline-flex items-center gap-2"
               >
                 <span>PATROCINAR ESTA EQUIPE</span>
-                <ArrowUpRight className="w-5 h-5" />
+                <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>
           </section>
@@ -184,10 +187,10 @@ export const TeamDetailView: React.FC = () => {
           <div className="lg:col-span-8 space-y-10">
             {/* Team Members / Athletes */}
             {team.members && team.members.length > 0 && (
-              <section className="border border-[#77746E]/30 bg-[#181716] p-6 sm:p-8 space-y-6">
-                <div className="flex items-center justify-between border-b border-[#77746E]/20 pb-3">
-                  <h3 className="text-xl font-display font-bold uppercase text-[#F1EDE4]">
-                    Integrantes & Atletas Homologados ({team.members.length})
+              <section className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 sm:p-8 space-y-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+                <div className="flex items-center justify-between border-b border-[#1A1A1A]/10 pb-3">
+                  <h3 className="text-xl font-display font-bold uppercase text-[#1A1A1A]">
+                    Pilotos, Projetistas & Engenheiros ({team.members.length})
                   </h3>
                 </div>
 
@@ -195,23 +198,23 @@ export const TeamDetailView: React.FC = () => {
                   {team.members.map((member) => (
                     <div
                       key={member.id}
-                      className="p-4 border border-[#77746E]/20 bg-[#141312] space-y-1"
+                      className="p-4 border border-[#1A1A1A]/10 bg-[#F6F4EE] space-y-1"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="font-display font-bold text-lg text-[#F1EDE4] uppercase">
+                        <span className="font-display font-bold text-base text-[#1A1A1A] uppercase">
                           {member.name}
                         </span>
                         {member.numberOrNick && (
-                          <span className="text-xs font-bold text-[#E95D2A]">
+                          <span className="text-xs font-serif font-bold text-[#B44D2E]">
                             {member.numberOrNick}
                           </span>
                         )}
                       </div>
-                      <div className="text-xs text-[#B9D531] uppercase font-semibold">
+                      <div className="text-[10px] text-[#B44D2E] uppercase font-bold tracking-wider font-sans">
                         {member.role}
                       </div>
                       {member.bio && (
-                        <p className="text-xs text-[#77746E] pt-1 leading-relaxed">
+                        <p className="text-xs text-[#1A1A1A]/70 pt-1 leading-relaxed font-sans">
                           {member.bio}
                         </p>
                       )}
@@ -223,10 +226,10 @@ export const TeamDetailView: React.FC = () => {
 
             {/* Achievements / Conquistas */}
             {team.achievements && team.achievements.length > 0 && (
-              <section className="border border-[#77746E]/30 bg-[#181716] p-6 sm:p-8 space-y-6">
-                <div className="flex items-center justify-between border-b border-[#77746E]/20 pb-3">
-                  <h3 className="text-xl font-display font-bold uppercase text-[#F1EDE4]">
-                    Conquistas & Histórico Oficial
+              <section className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 sm:p-8 space-y-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+                <div className="flex items-center justify-between border-b border-[#1A1A1A]/10 pb-3">
+                  <h3 className="text-xl font-display font-bold uppercase text-[#1A1A1A]">
+                    Títulos & Histórico de Arena
                   </h3>
                 </div>
 
@@ -234,23 +237,23 @@ export const TeamDetailView: React.FC = () => {
                   {team.achievements.map((ach) => (
                     <div
                       key={ach.id}
-                      className="p-4 border border-[#77746E]/20 bg-[#141312] flex items-center justify-between gap-4"
+                      className="p-4 border border-[#1A1A1A]/10 bg-[#F6F4EE] flex items-center justify-between gap-4"
                     >
                       <div className="space-y-1">
                         <div className="flex items-center gap-2">
-                          <Trophy className="w-4 h-4 text-[#B9D531]" />
-                          <span className="font-display font-bold text-lg uppercase text-[#F1EDE4]">
+                          <Trophy className="w-4 h-4 text-[#B44D2E]" />
+                          <span className="font-display font-bold text-lg uppercase text-[#1A1A1A]">
                             {ach.title}
                           </span>
                         </div>
-                        <div className="text-xs text-[#77746E]">
+                        <div className="text-xs text-[#1A1A1A]/60 font-sans">
                           Torneio: {ach.competitionName} • Ano: {ach.year}
                         </div>
                         {ach.description && (
-                          <p className="text-xs text-[#77746E]">{ach.description}</p>
+                          <p className="text-xs text-[#1A1A1A]/70 font-sans">{ach.description}</p>
                         )}
                       </div>
-                      <span className="px-3 py-1 bg-[#252422] border border-[#77746E]/40 font-display font-bold text-sm text-[#E95D2A] uppercase shrink-0">
+                      <span className="px-3 py-1 bg-[#1A1A1A] font-serif font-bold text-xs text-[#FDFCF8] uppercase shrink-0">
                         {ach.placement}
                       </span>
                     </div>
@@ -261,9 +264,9 @@ export const TeamDetailView: React.FC = () => {
 
             {/* Competitions Participated */}
             {teamCompetitions.length > 0 && (
-              <section className="border border-[#77746E]/30 bg-[#181716] p-6 sm:p-8 space-y-6">
-                <div className="flex items-center justify-between border-b border-[#77746E]/20 pb-3">
-                  <h3 className="text-xl font-display font-bold uppercase text-[#F1EDE4]">
+              <section className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 sm:p-8 space-y-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+                <div className="flex items-center justify-between border-b border-[#1A1A1A]/10 pb-3">
+                  <h3 className="text-xl font-display font-bold uppercase text-[#1A1A1A]">
                     Competições no Circuito
                   </h3>
                 </div>
@@ -273,17 +276,17 @@ export const TeamDetailView: React.FC = () => {
                     <div
                       key={comp.id}
                       onClick={() => navigate('competition-detail', comp.slug)}
-                      className="p-4 border border-[#77746E]/20 bg-[#141312] hover:border-[#E95D2A] cursor-pointer transition-all flex items-center justify-between gap-4 group"
+                      className="p-4 border border-[#1A1A1A]/10 bg-[#F6F4EE] hover:border-[#B44D2E] cursor-pointer transition-all flex items-center justify-between gap-4 group"
                     >
                       <div>
-                        <span className="text-[10px] uppercase font-bold text-[#B9D531]">
+                        <span className="text-[10px] uppercase font-bold text-[#B44D2E] font-sans tracking-wider">
                           {comp.category} • Temporada {comp.season}
                         </span>
-                        <h4 className="text-lg font-display font-bold uppercase text-[#F1EDE4] group-hover:text-[#E95D2A] transition-colors">
+                        <h4 className="text-lg font-display font-bold uppercase text-[#1A1A1A] group-hover:text-[#B44D2E] transition-colors">
                           {comp.name}
                         </h4>
                       </div>
-                      <ArrowUpRight className="w-4 h-4 text-[#77746E] group-hover:text-[#E95D2A]" />
+                      <ArrowUpRight className="w-4 h-4 text-[#1A1A1A]/40 group-hover:text-[#B44D2E]" />
                     </div>
                   ))}
                 </div>
@@ -295,15 +298,15 @@ export const TeamDetailView: React.FC = () => {
           <div className="lg:col-span-4 space-y-6">
             {/* Sponsors of the Team (Apoiado Por) */}
             {teamSponsors.length > 0 && (
-              <div className="border border-[#77746E]/30 bg-[#1a1918] p-6 space-y-4">
-                <span className="text-xs uppercase font-bold tracking-widest text-[#B9D531]">
-                  APOIADO POR
+              <div className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 space-y-4 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#B44D2E] font-sans">
+                  PATROCINADORES DA EQUIPE
                 </span>
                 <div className="space-y-3">
                   {teamSponsors.map((sp) => (
                     <div
                       key={sp.id}
-                      className="p-3 border border-[#77746E]/20 bg-[#141312] flex items-center gap-3"
+                      className="p-3 border border-[#1A1A1A]/10 bg-[#F6F4EE] flex items-center gap-3"
                     >
                       {sp.logoUrl && (
                         <img
@@ -314,11 +317,11 @@ export const TeamDetailView: React.FC = () => {
                         />
                       )}
                       <div>
-                        <span className="text-xs font-bold text-[#F1EDE4] uppercase block">
+                        <span className="text-xs font-bold text-[#1A1A1A] uppercase block font-sans">
                           {sp.name}
                         </span>
-                        <span className="text-[10px] uppercase text-[#77746E]">
-                          {sp.tierName || 'Patrocinador'}
+                        <span className="text-[10px] uppercase text-[#1A1A1A]/60 font-sans">
+                          {sp.tierName || 'Patrocinador Técnico'}
                         </span>
                       </div>
                     </div>
@@ -329,14 +332,14 @@ export const TeamDetailView: React.FC = () => {
 
             {/* Official Links & Contact */}
             {team.officialLinks && Object.values(team.officialLinks).some(Boolean) && (
-              <div className="border border-[#77746E]/30 bg-[#1a1918] p-6 space-y-4">
-                <span className="text-xs uppercase font-bold tracking-widest text-[#77746E]">
-                  CANAIS OFICIAIS DA EQUIPE
+              <div className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 space-y-4 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#1A1A1A]/50 font-sans">
+                  CANAIS OFICIAIS DA BANCADA
                 </span>
-                <div className="space-y-2 text-xs">
+                <div className="space-y-2 text-xs font-sans">
                   {team.officialLinks.contactEmail && (
-                    <div className="flex items-center gap-2 text-[#F1EDE4]">
-                      <Mail className="w-3.5 h-3.5 text-[#E95D2A]" />
+                    <div className="flex items-center gap-2 text-[#1A1A1A]">
+                      <Mail className="w-3.5 h-3.5 text-[#B44D2E]" />
                       <a
                         href={`mailto:${team.officialLinks.contactEmail}`}
                         className="hover:underline break-all"
@@ -347,29 +350,29 @@ export const TeamDetailView: React.FC = () => {
                   )}
 
                   {team.officialLinks.contactPhone && (
-                    <div className="flex items-center gap-2 text-[#F1EDE4]">
-                      <Phone className="w-3.5 h-3.5 text-[#B9D531]" />
+                    <div className="flex items-center gap-2 text-[#1A1A1A]">
+                      <Phone className="w-3.5 h-3.5 text-[#1A1A1A]" />
                       <span>{team.officialLinks.contactPhone}</span>
                     </div>
                   )}
 
                   {team.officialLinks.instagram && (
-                    <div className="flex items-center gap-2 text-[#F1EDE4]">
-                      <Instagram className="w-3.5 h-3.5 text-[#E95D2A]" />
+                    <div className="flex items-center gap-2 text-[#1A1A1A]">
+                      <Instagram className="w-3.5 h-3.5 text-[#B44D2E]" />
                       <span>{team.officialLinks.instagram}</span>
                     </div>
                   )}
 
                   {team.officialLinks.youtube && (
-                    <div className="flex items-center gap-2 text-[#F1EDE4]">
-                      <Youtube className="w-3.5 h-3.5 text-[#E95D2A]" />
+                    <div className="flex items-center gap-2 text-[#1A1A1A]">
+                      <Youtube className="w-3.5 h-3.5 text-[#B44D2E]" />
                       <span>{team.officialLinks.youtube}</span>
                     </div>
                   )}
 
                   {team.officialLinks.website && (
-                    <div className="flex items-center gap-2 text-[#F1EDE4]">
-                      <Globe className="w-3.5 h-3.5 text-[#B9D531]" />
+                    <div className="flex items-center gap-2 text-[#1A1A1A]">
+                      <Globe className="w-3.5 h-3.5 text-[#1A1A1A]" />
                       <a
                         href={team.officialLinks.website}
                         target="_blank"

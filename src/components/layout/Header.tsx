@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigation, RoutePath } from '../../context/NavigationContext';
 import { useData } from '../../context/DataContext';
-import { Menu, X, ArrowUpRight, ShieldCheck, Trophy } from 'lucide-react';
+import { Menu, X, ArrowUpRight, ShieldCheck, Bot } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const { currentRoute, navigate, isAdminAuthenticated } = useNavigation();
@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
     { label: 'INÍCIO', route: 'home' },
     { label: 'COMPETIÇÕES', route: 'competitions' },
     { label: 'EQUIPES', route: 'teams' },
-    { label: 'RESULTADOS', route: 'results' },
+    { label: 'SÚMULAS & RESULTADOS', route: 'results' },
     { label: 'PATROCÍNIO', route: 'sponsorship' },
     { label: 'SOBRE', route: 'about' },
     { label: 'CONTATO', route: 'contact' },
@@ -38,14 +38,14 @@ export const Header: React.FC = () => {
               className="flex items-center gap-3 text-left group focus:outline-none"
             >
               <div className="w-10 h-10 bg-[#1A1A1A] text-[#FDFCF8] flex items-center justify-center font-display font-black text-xl tracking-tighter group-hover:bg-[#B44D2E] transition-colors">
-                <Trophy className="w-4 h-4 text-[#FDFCF8]" />
+                <Bot className="w-5 h-5 text-[#FDFCF8]" />
               </div>
               <div className="flex flex-col">
                 <span className="text-[9px] uppercase tracking-[0.3em] font-sans font-bold text-[#B44D2E] leading-none mb-1">
-                  Volume 2026 &mdash; Oficial
+                  Robótica Competitiva &bull; Oficial
                 </span>
                 <span className="font-display font-black text-2xl sm:text-3xl tracking-tighter text-[#1A1A1A] leading-none">
-                  {settings.platformName || 'COMPETE'}.
+                  {settings.platformName || 'ROBOCOMPETE'}.
                 </span>
               </div>
             </button>

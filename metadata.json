@@ -1,6 +1,8 @@
 {
-  "name": "COMPETE - Competições, Equipes e Patrocínio",
-  "description": "Plataforma oficial para apresentação de competições, equipes homologadas, súmulas e resultados oficiais, e conexões comerciais de patrocínio.",
+  "name": "ROBOCOMPETE - Competições de Robótica e Patrocínio",
+  "description": "Plataforma oficial dedicada a competições de robótica (combate, FRC, sumô, seguidores de linha), equipes de engenharia homologadas, súmulas de arena e conexões comerciais de patrocínio.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

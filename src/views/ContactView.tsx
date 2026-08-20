@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useData } from '../context/DataContext';
-import { Mail, Phone, MapPin, Instagram, Linkedin, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, Send, CheckCircle2, AlertCircle, Bot } from 'lucide-react';
 
 export const ContactView: React.FC = () => {
   const { settings, submitContactMessage } = useData();
@@ -47,39 +47,39 @@ export const ContactView: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 sm:py-16">
+    <div className="min-h-screen py-12 sm:py-16 bg-[#FDFCF8] text-[#1A1A1A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Header */}
-        <section className="border-b border-[#77746E]/20 pb-8 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#252422] text-[#B9D531] text-xs uppercase font-bold tracking-widest border border-[#B9D531]/30">
-            ATENDIMENTO & OUVIDORIA
+        <section className="border-b border-[#1A1A1A]/10 pb-8 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#1A1A1A]/5 text-[#B44D2E] text-[10px] uppercase font-bold tracking-[0.3em] border border-[#1A1A1A]/10 font-sans">
+            SECRETARIA TÉCNICA & COMISSÃO DE HOMOLOGAÇÃO
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-black uppercase text-[#F1EDE4] leading-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase text-[#1A1A1A] tracking-tight">
             CANAIS OFICIAIS.
           </h1>
-          <p className="text-sm sm:text-base text-[#77746E] max-w-2xl">
-            Entre em contato com a organização para credenciamento de equipes, homologação de torneios, dúvidas técnicas ou imprensa.
+          <p className="text-sm sm:text-base text-[#1A1A1A]/70 max-w-2xl font-sans">
+            Entre em contato com a comissão técnica para credenciamento de equipes de robótica, homologação de arenas blindadas, laudos de segurança ou propostas de parceria.
           </p>
         </section>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Official Contact details */}
           <div className="lg:col-span-5 space-y-6">
-            <h2 className="text-2xl font-display font-bold uppercase text-[#F1EDE4]">
+            <h2 className="text-2xl font-display font-bold uppercase text-[#1A1A1A]">
               Informações de Contato
             </h2>
 
-            <div className="border border-[#77746E]/30 bg-[#181716] p-6 space-y-4">
+            <div className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 space-y-4 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
               {settings.officialContact.email && (
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-[#E95D2A] shrink-0 mt-0.5" />
+                  <Mail className="w-5 h-5 text-[#B44D2E] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[11px] uppercase font-bold text-[#77746E] block">
-                      E-mail Oficial
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#1A1A1A]/50 block font-sans">
+                      E-mail Técnico & Oficial
                     </span>
                     <a
                       href={`mailto:${settings.officialContact.email}`}
-                      className="text-sm font-semibold text-[#F1EDE4] hover:underline break-all"
+                      className="text-sm font-semibold text-[#1A1A1A] hover:underline break-all font-sans"
                     >
                       {settings.officialContact.email}
                     </a>
@@ -89,12 +89,12 @@ export const ContactView: React.FC = () => {
 
               {settings.officialContact.whatsapp && (
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-[#B9D531] shrink-0 mt-0.5" />
+                  <Phone className="w-5 h-5 text-[#1A1A1A] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[11px] uppercase font-bold text-[#77746E] block">
-                      WhatsApp / Central
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#1A1A1A]/50 block font-sans">
+                      WhatsApp / Paddock & Boxes
                     </span>
-                    <span className="text-sm font-semibold text-[#F1EDE4]">
+                    <span className="text-sm font-semibold text-[#1A1A1A] font-sans">
                       {settings.officialContact.whatsapp}
                     </span>
                   </div>
@@ -103,12 +103,12 @@ export const ContactView: React.FC = () => {
 
               {settings.officialContact.address && (
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-[#77746E] shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-[#B44D2E] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[11px] uppercase font-bold text-[#77746E] block">
-                      Sede Administrativa
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#1A1A1A]/50 block font-sans">
+                      Sede Técnica & Homologação
                     </span>
-                    <span className="text-sm text-[#F1EDE4]">
+                    <span className="text-sm text-[#1A1A1A]/80 font-sans">
                       {settings.officialContact.address}
                     </span>
                   </div>
@@ -117,12 +117,12 @@ export const ContactView: React.FC = () => {
 
               {settings.officialContact.instagram && (
                 <div className="flex items-start gap-3">
-                  <Instagram className="w-5 h-5 text-[#E95D2A] shrink-0 mt-0.5" />
+                  <Instagram className="w-5 h-5 text-[#B44D2E] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[11px] uppercase font-bold text-[#77746E] block">
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#1A1A1A]/50 block font-sans">
                       Instagram Oficial
                     </span>
-                    <span className="text-sm text-[#F1EDE4]">
+                    <span className="text-sm text-[#1A1A1A] font-sans">
                       {settings.officialContact.instagram}
                     </span>
                   </div>
@@ -131,12 +131,12 @@ export const ContactView: React.FC = () => {
 
               {settings.officialContact.linkedin && (
                 <div className="flex items-start gap-3">
-                  <Linkedin className="w-5 h-5 text-[#B9D531] shrink-0 mt-0.5" />
+                  <Linkedin className="w-5 h-5 text-[#1A1A1A] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[11px] uppercase font-bold text-[#77746E] block">
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#1A1A1A]/50 block font-sans">
                       LinkedIn Institucional
                     </span>
-                    <span className="text-sm text-[#F1EDE4]">
+                    <span className="text-sm text-[#1A1A1A] font-sans">
                       {settings.officialContact.linkedin}
                     </span>
                   </div>
@@ -144,36 +144,36 @@ export const ContactView: React.FC = () => {
               )}
             </div>
 
-            <div className="p-5 border border-[#77746E]/25 bg-[#141312] text-xs text-[#77746E] leading-relaxed">
-              Horário de atendimento técnico: Segunda a sexta-feira, das 09h às 18h (Horário de Brasília).
+            <div className="p-5 border border-[#1A1A1A]/10 bg-[#F6F4EE] text-xs text-[#1A1A1A]/70 leading-relaxed font-sans">
+              Horário de atendimento técnico: Segunda a sexta-feira, das 09h às 18h (Horário de Brasília). Plantão especial em dias de arena.
             </div>
           </div>
 
           {/* Right Column: Contact Message Form */}
           <div className="lg:col-span-7">
-            <div className="border border-[#77746E]/30 bg-[#181716] p-6 sm:p-8 space-y-6">
-              <h2 className="text-2xl font-display font-bold uppercase text-[#F1EDE4]">
+            <div className="border border-[#1A1A1A]/10 bg-[#FFFFFF] p-6 sm:p-8 space-y-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+              <h2 className="text-2xl font-display font-bold uppercase text-[#1A1A1A]">
                 Envie uma Mensagem
               </h2>
 
               {success && (
-                <div className="p-4 bg-[#B9D531]/10 border border-[#B9D531] text-[#B9D531] text-xs sm:text-sm flex items-start gap-3">
+                <div className="p-4 bg-[#B44D2E]/10 border border-[#B44D2E] text-[#B44D2E] text-xs sm:text-sm flex items-start gap-3 font-sans">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
-                  <span>{success}</span>
+                  <span className="font-medium">{success}</span>
                 </div>
               )}
 
               {error && (
-                <div className="p-4 bg-[#E95D2A]/10 border border-[#E95D2A] text-[#E95D2A] text-xs sm:text-sm flex items-start gap-3">
+                <div className="p-4 bg-red-100 border border-red-400 text-red-700 text-xs sm:text-sm flex items-start gap-3 font-sans">
                   <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
-                  <span>{error}</span>
+                  <span className="font-medium">{error}</span>
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="contact-name" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="contact-name" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       Seu Nome *
                     </label>
                     <input
@@ -182,13 +182,13 @@ export const ContactView: React.FC = () => {
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder="Nome completo"
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      placeholder="Nome do capitão ou responsável"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contact-email" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="contact-email" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       Seu E-mail *
                     </label>
                     <input
@@ -197,15 +197,15 @@ export const ContactView: React.FC = () => {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="seuemail@exemplo.com"
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      placeholder="email@equipe.org ou seu@email.com"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="contact-phone" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="contact-phone" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       Telefone / WhatsApp (Opcional)
                     </label>
                     <input
@@ -214,12 +214,12 @@ export const ContactView: React.FC = () => {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="(11) 99999-9999"
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contact-subject" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                    <label htmlFor="contact-subject" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                       Assunto *
                     </label>
                     <input
@@ -228,14 +228,14 @@ export const ContactView: React.FC = () => {
                       required
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
-                      placeholder="Ex: Homologação de nova etapa"
-                      className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] px-3 py-2.5 focus:outline-none focus:border-[#E95D2A]"
+                      placeholder="Ex: Homologação de robô de combate"
+                      className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] px-3 py-2.5 focus:outline-none focus:border-[#B44D2E] font-sans"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="contact-msg" className="block text-xs uppercase font-bold text-[#F1EDE4] mb-1">
+                  <label htmlFor="contact-msg" className="block text-xs uppercase font-bold text-[#1A1A1A] mb-1 font-sans">
                     Mensagem *
                   </label>
                   <textarea
@@ -244,15 +244,15 @@ export const ContactView: React.FC = () => {
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Escreva sua dúvida ou solicitação..."
-                    className="w-full bg-[#131312] border border-[#77746E]/30 text-xs sm:text-sm text-[#F1EDE4] p-3 focus:outline-none focus:border-[#E95D2A]"
+                    placeholder="Descreva as especificações do robô, evento ou dúvida técnica..."
+                    className="w-full bg-[#F6F4EE] border border-[#1A1A1A]/10 text-xs sm:text-sm text-[#1A1A1A] p-3 focus:outline-none focus:border-[#B44D2E] font-sans"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-3.5 bg-[#252422] hover:bg-[#E95D2A] text-[#F1EDE4] font-display font-bold text-base uppercase tracking-wider transition-colors cut-corner flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full py-3.5 bg-[#1A1A1A] hover:bg-[#B44D2E] text-[#FDFCF8] font-sans font-bold text-xs uppercase tracking-[0.2em] transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
                 >
                   <Send className="w-4 h-4" />
                   <span>{submitting ? 'ENVIANDO...' : 'ENVIAR MENSAGEM'}</span>
